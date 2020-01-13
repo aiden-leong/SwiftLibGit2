@@ -14,7 +14,7 @@ final class SwiftLibGit2Tests: XCTestCase {
 
     func test_git_ls_remote() {
         LibGit2.initialize()
-        let urlString = "https://github.com/andy1247008998/Clibgit2.git"
+        let urlString = "https://github.com/andy1247008998/SwiftLibGit2.git"
         let remote = Remote.create_detached(urlString: urlString)
         _ = Remote.connect(remote: remote!)
         Remote.disconnect(remote: remote)
