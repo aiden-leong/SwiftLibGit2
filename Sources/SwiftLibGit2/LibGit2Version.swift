@@ -1,5 +1,5 @@
-struct LibGit2Version {
-    var major: Int32
-    var minor: Int32
-    var rev: Int32
+public struct LibGit2Version {
+    public var major: Int32
+    public var minor: Int32
+    public var rev: Int32
 }

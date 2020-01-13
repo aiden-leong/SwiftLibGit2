@@ -8,9 +8,9 @@
 import Clibgit2
 import Foundation
 
-class Repository {
+public class Repository {
     
-    static func head(repo: OpaquePointer) -> OpaquePointer? {
+    public static func head(repo: OpaquePointer) -> OpaquePointer? {
         let out = UnsafeMutablePointer<OpaquePointer?>.allocate(capacity: 1)
         let errorCode = git_repository_head(out, repo)
         switch errorCode {
@@ -22,7 +22,7 @@ class Repository {
         }
     }
     
-    static func initialize(pathString: String, is_bare: Bool) -> OpaquePointer? {
+    public static func initialize(pathString: String, is_bare: Bool) -> OpaquePointer? {
         let out = UnsafeMutablePointer<OpaquePointer?>.allocate(capacity: 1)
         let repo: OpaquePointer? = nil
         let path = URL.init(string: pathString)
@@ -39,7 +39,7 @@ class Repository {
         }
     }
     
-    static func free(repo: UnsafeMutablePointer<OpaquePointer?>) {
+    public static func free(repo: UnsafeMutablePointer<OpaquePointer?>) {
         git_repository_free(repo.pointee)
     }
     

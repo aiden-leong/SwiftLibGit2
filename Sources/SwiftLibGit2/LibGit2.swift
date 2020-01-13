@@ -7,24 +7,24 @@
 
 import Clibgit2
 
-class LibGit2 {
+public class LibGit2 {
     
-    static func features() {
+    public static func features() {
         git_libgit2_features()
     }
     
-    static func initialize() {
+    public static func initialize() {
         git_libgit2_init()
     }
     
-    static func opts() {
+    public static func opts() {
     }
     
-    static func shutdown() {
+    public static func shutdown() {
         git_libgit2_shutdown()
     }
     
-    static func version() -> LibGit2Version {
+    public static func version() -> LibGit2Version {
         let major = UnsafeMutablePointer<Int32>.allocate(capacity: 1)
         let minor = UnsafeMutablePointer<Int32>.allocate(capacity: 1)
         let rev = UnsafeMutablePointer<Int32>.allocate(capacity: 1)
